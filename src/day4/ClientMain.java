@@ -21,9 +21,9 @@ public class ClientMain {
             System.err.println("Invalid argument input");
         }
 
-        try {
-            Socket s = new Socket("localhost", Integer.parseInt(portNumber));
+        Socket s = new Socket("localhost", Integer.parseInt(portNumber));
 
+        try {
             InputStream is = s.getInputStream();
             BufferedInputStream bis = new BufferedInputStream(is);
             DataInputStream dis = new DataInputStream(bis);
